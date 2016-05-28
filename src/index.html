@@ -1,14 +1,26 @@
 <html>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="./basketball.js"></scriptsrc></script>
+<link rel="stylesheet" href="./style.css">
 <body>
 
 <div ng-app="basketball" ng-controller="myCtrl">
+    <header><h1>BUCKET LIST</h1></header>
+    <div id="balls">
+        <h2>BALLS</h2>
+    </div>
     <ul>
-        <li ng-repeat="ball in balls">{{ball}}</li>
+        <li ng-repeat="ball in balls">
+            <div>{{ball}}
+                <span ng-click="removeBall($index)">&times;</span>
+            </div>
+        </li>
     </ul>
     <input ng-model="addMe">
     <button ng-click="addBall()">Add</button>
+    <div id="basket">
+        <h2>BALLS IN BASKET</h2>
+    </div>
 </div>
 
 

@@ -5,4 +5,7 @@ app.controller("myCtrl", function ($scope) {
     $scope.addBall = function () {
         $scope.balls.push($scope.addMe);
     }
+    $scope.removeBall = function (x) {
+        $scope.balls.splice(x, 1);
+    }
 });
