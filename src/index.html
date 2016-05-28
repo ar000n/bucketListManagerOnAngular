@@ -1,0 +1,25 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<script>
+    var app = angular.module("basketball", []);
+    app.controller("myCtrl", function ($scope) {
+        $scope.balls = ["one night at beach", "new bike", "a solo ride to vynad"];
+        $scope.addBall = function () {
+            $scope.balls.push($scope.addMe);
+        }
+    });
+</script>
+
+<div ng-app="basketball" ng-controller="myCtrl">
+    <ul>
+        <li ng-repeat="ball in balls">{{ball}}</li>
+    </ul>
+    <input ng-model="addMe">
+    <button ng-click="addBall()">Add</button>
+</div>
+
+
+</body>
+</html>
