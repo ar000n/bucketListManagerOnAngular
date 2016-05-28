@@ -12,7 +12,8 @@
     <ul>
         <li ng-repeat="ball in balls">
             <div>{{ball}}
-                <span ng-click="removeBall($index)">&times;</span>
+                <span ng-click="removeBall($index)">&#10060;</span>
+                <span ng-click="moveToDone($index)">&#9989;</span>
             </div>
         </li>
     </ul>
@@ -20,6 +21,11 @@
     <button ng-click="addBall()">Add</button>
     <div id="basket">
         <h2>BALLS IN BASKET</h2>
+        <ul>
+            <li ng-repeat="ball in basket">
+                <div>{{ball}}</div>
+            </li>
+        </ul>
     </div>
 </div>
 
